@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface-container/40 backdrop-blur-xl;
+    border: 1px solid rgba(164, 230, 255, 0.1);
+  }
+
+  .glass-panel {
+    @apply bg-surface-container/60 backdrop-blur-2xl;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(164, 230, 255, 0.4);
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .text-shadow-lg {
+    text-shadow: 0 4px 8px rgba(0, 0, 0, 0.4), 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* Custom Scrollbar for Chat */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-surface-container-highest rounded-full;
+  }
+}
+
+/* Animations from DESIGN.md */
+@keyframes pulse-ring {
+  0% { transform: scale(0.5); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Background Blobs */
+.bg-blob {
+  @apply absolute pointer-events-none rounded-full blur-[120px];
+}
+
+/* Button Gradients */
+.btn-primary {
+  @apply bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-bold transition-all duration-300 hover:scale-[0.98] active:scale-95 disabled:opacity-50;
+}

@@ -1,0 +1,14 @@
+INSTRUCCIONES PARA AGREGAR EL LOGO DE VERA
+==========================================
+
+Por favor, guarda la imagen del logo que te proporcioné como:
+public/vera-logo.png
+
+El logo debe estar en formato PNG con fondo transparente.
+
+Una vez guardado, el logo aparecerá automáticamente en:
+- Navbar de la landing page
+- Header del dashboard (Layout)
+- Título de la página (index.html)
+
+El código ya está actualizado para usar /vera-logo.png
