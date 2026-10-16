@@ -38,4 +38,4 @@ export function useTextScramble(targetText, speed = 18, enabled = true) {
   }, [targetText, speed, enabled]);
 
   return displayText;
-}\n
+}
