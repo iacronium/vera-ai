@@ -1,39 +1,17 @@
-import { motion } from 'framer-motion';
+import React from 'react';
+import NeuralOrb from './NeuralOrb';
 
-const AIPulse = ({ className = "" }) => {
+/**
+ * AIPulse (Versión 2040)
+ * Reemplazo retrocompatible que preserva la interfaz { className }
+ * y proyecta el nuevo NeuralOrb cuántico con micro-animaciones procedurales.
+ */
+const AIPulse = ({ className = '', state = 'idle', size = 36 }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
-      {/* Core */}
-      <div className="w-2 h-2 bg-primary rounded-full z-10 shadow-[0_0_10px_rgba(164,230,255,0.8)]" />
-      
-      {/* Pulse Rings */}
-      <motion.div
-        className="absolute w-2 h-2 border-2 border-secondary rounded-full"
-        animate={{
-          scale: [1, 4],
-          opacity: [1, 0],
-        }}
-        transition={{
-          duration: 2,
-          ease: [0.4, 0, 0.2, 1],
-          repeat: Infinity,
-        }}
-      />
-      <motion.div
-        className="absolute w-2 h-2 border-2 border-primary rounded-full"
-        animate={{
-          scale: [1, 3],
-          opacity: [0.8, 0],
-        }}
-        transition={{
-          duration: 2,
-          ease: [0.4, 0, 0.2, 1],
-          repeat: Infinity,
-          delay: 1,
-        }}
-      />
+      <NeuralOrb state={state} size={size} />
     </div>
   );
 };
 
-export default AIPulse;
+export default AIPulse;\n
