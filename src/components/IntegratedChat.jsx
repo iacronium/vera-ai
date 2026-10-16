@@ -432,4 +432,4 @@ export default function IntegratedChat() {
       </div>
     </div>
   );
-}\n
+}
