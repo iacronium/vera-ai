@@ -14,4 +14,4 @@ const AIPulse = ({ className = '', state = 'idle', size = 36 }) => {
   );
 };
 
-export default AIPulse;
+export default AIPulse;/
