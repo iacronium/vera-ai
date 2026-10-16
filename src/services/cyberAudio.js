@@ -132,4 +132,4 @@ class CyberAudioService {
   }
 }
 
-export const cyberAudio = new CyberAudioService();\n
+export const cyberAudio = new CyberAudioService();
