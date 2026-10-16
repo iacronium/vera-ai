@@ -84,4 +84,4 @@ export default function CognitiveTrace({
       </div>
     </motion.div>
   );
-}\n
+}
